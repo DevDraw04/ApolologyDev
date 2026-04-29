@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree - My Love💖</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<!-- FLOATING BACKGROUND -->
+<div class="floater-container" id="floaters"></div>
+
+<!-- =============== MAIN PAGE =============== -->
+<div class="page active" id="main-page">
+  <div style="max-width: 600px; margin: 0 auto;">
+    <div class="main-header">
+      <div class="emoji-row">
+        <span>💗</span>
+        <span>🧸</span>
+        <span>💕</span>
+        <span>👸</span>
+        <span>🌸</span>
+      </div>
+      <h1 class="main-title">Darling ❤️, are you angry with me?</h1>
+      <p class="main-subtitle">— My Cute Lil Pie 💖</p>
+    </div>
+
+    <div class="button-grid">
+      <button class="option-btn" onclick="navigate('yes-page')">
+        <span class="option-emoji">😡</span>
+        <span class="option-text">Yes</span>
+      </button>
+      <button class="option-btn" onclick="navigate('little-page')">
+        <span class="option-emoji">🥺</span>
+        <span class="option-text">A little</span>
+      </button>
+      <button class="option-btn" onclick="navigate('no-page')">
+        <span class="option-emoji">❤️</span>
+        <span class="option-text">No</span>
+      </button>
+    </div>
+
+    <div class="extra-buttons">
+      <button class="extra-btn" onclick="navigate('notes-page')">
+        <span>💌</span> Love Notes😘💕
+        <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: #ec407a; font-size: 9px; font-style: italic;">(only for my sweety pie)</p>
+
+      </button>
+      <button class="extra-btn" onclick="navigate('miss-page')">
+        <span>🧸</span>Do you miss me? 🥹 Kiss Here 💋
+      </button>
+    </div>
+
+    <p class="footer-text">made with 💖 just for you, Shreee</p>
+  </div>
+</div>
+
+<!-- =============== YES PAGE =============== -->
+<div class="page" id="yes-page">
+  <div class="popup-content">
+    <span class="popup-emoji">💔</span>
+    <h2 class="popup-title">I'm really, really sorry babuuuuuu...</h2>
+    
+    <div class="message-card">
+      <p class="message-text">
+        Shreee 💖, Please forgive me. I love you more than words 
+        can hold, and the thought of you upset breaks my whole world. Please shine brightly my Sunflower🌻
+      </p>
+      <span style="font-family:cursive; color: #ec407a;";class="message-highlight">
+        Baby😘,Let me make it right. Let me hold you. Let me love you again😍. Can't wait to grab you🫣
+      </span>
+    </div>
+
+    <div class="heart-row">
+      <span>💔</span>
+      <span>📮</span>
+      <span>❤️</span>
+    </div>
+
+    <button class="action-btn secondary" onclick="goBack()">← Back</button>
+  </div>
+</div>
+
+<!-- =============== A LITTLE PAGE =============== -->
+<div class="page" id="little-page">
+  <div class="popup-content">
+    <div class="hug-animation">
+      <span class="floating-hearts">💞</span>
+      <span class="bear-1">🧸</span>
+      <span class="bear-2">🧸</span>
+    </div>
+    
+    <h2 class="popup-title">Awww, just a little? 😊</h2>
+    
+    <div class="message-card">
+      <p class="message-text">
+        <strong>Dear Shree 💖,</strong>
+      </p>
+      <p class="message-text">
+        Even a tiny pout from you reaches my heart in a big way. I'm sending you the 
+        warmest, squishiest, goofiest virtual hug so hard that makes worries fall asleep.
+      </p>
+      <p class="message-text">
+        You are my favourite person, my safe place, my softest yes. Thank you for being 
+        patient with me. I'll do better, I'll love you louder, and I'll always come running back 
+        to you. You're my forever <p class="nested-style">YES💋💕</p>
+      </p>
+      <p class="signature">I'm forever yours, My Love💖</p>
+    </div>
+
+    <button class="action-btn secondary" onclick="goBack()">← Back</button>
+  </div>
+</div>
+
+<!-- =============== NO PAGE =============== -->
+<div class="page" id="no-page">
+  <div class="popup-content">
+    <span class="popup-emoji">🥺</span>
+    <h2 class="popup-title">Please don't hide the truth, baby...</h2>
+    
+    <div class="message-card">
+      <p class="message-text">
+        I can read you like my favourite book, Shreee 💖. If something's bothering you, tell me. I 
+        want to listen, understand  and fix it.
+      </p>
+      <span class="message-highlight">
+        I love you very, very much , <p class="nested-style">Darling 💕😊</p>
+      </span>
+    </div>
+
+    <div class="heart-row">
+      <span>🌸</span>
+      <span>💕</span>
+      <span>🌷</span>
+      <span>❤️</span>
+      <span>🌸</span>
+    </div>
+
+    <button class="action-btn secondary" onclick="goBack()">← Back</button>
+  </div>
+</div>
+
+<!-- =============== LOVE NOTES PAGE =============== -->
+<div class="page" id="notes-page">
+  <div class="popup-content">
+    <span class="popup-emoji">💌</span>
+    <h2 class="popup-title">Love Notes 💌</h2>
+    <p style="color: var(--text-mid); font-size: 0.95rem; margin-bottom: 1rem;">
+      tiny letters from my heart to yours
+    </p>
+
+    <div class="note-display">
+      <p class="note-text" id="note-content">Loading your love note...</p>
+    </div>
+
+    <div class="note-controls">
+      <button class="action-btn" onclick="nextNote()">Another one</button>
+    </div>
+
+    <button class="action-btn secondary" style="margin-top: 1rem;" onclick="goBack()">← Back</button>
+  </div>
+</div>
+
+<!-- =============== MISS ME PAGE =============== -->
+<div class="page" id="miss-page">
+  <div class="popup-content">
+    <h2 class="popup-title">A hug, just for you 🧸</h2>
+    <p style="color: var(--text-mid); font-size: 0.95rem; margin-bottom: 1rem;">
+      the big one is me, the cute small one is you
+    </p>
+
+    <div class="teddy-scene">
+      <div class="love-pulse"></div>
+      <span class="big-teddy">🧸</span>
+      <span class="small-teddy">🧸</span>
+    </div>
+
+    <div class="message-card">
+      <p class="message-text">
+        Whenever you miss me, come to this page and feel my arms around you, Shree 💖🫂.
+      </p>
+    </div>
+
+    <div class="note-controls">
+      <button class="action-btn" onclick="triggerHugAgain()">Hug again 🤗🫂</button>
+      <button class="action-btn secondary" onclick="goBack()">← Back</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
